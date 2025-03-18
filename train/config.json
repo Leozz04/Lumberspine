@@ -1,0 +1,46 @@
+{
+    "model_config": {
+        "model_name": "Qwen/Qwen2.5-VL-3B-Instruct",
+        "max_length": 512,
+        "image_size": 448,
+        "use_lora": true,
+        "lora_config": {
+            "r": 16,
+            "alpha": 32,
+            "dropout": 0.1,
+            "target_modules": ["q_proj", "v_proj"]
+        }
+    },
+    "training_config": {
+        "num_epochs": 10,
+        "batch_size": 8,
+        "learning_rate": 2e-4,
+        "weight_decay": 0.01,
+        "warmup_ratio": 0.1,
+        "gradient_accumulation_steps": 4,
+        "max_grad_norm": 1.0,
+        "mixed_precision": "fp16",
+        "seed": 42
+    },
+    "data_config": {
+        "train_test_split": 0.2,
+        "num_workers": 4,
+        "conditions": [
+            "spinal_canal_stenosis",
+            "neural_foraminal_narrowing",
+            "subarticular_stenosis"
+        ],
+        "severity_levels": [
+            "normal_mild",
+            "moderate",
+            "severe"
+        ],
+        "spine_levels": [
+            "l1_l2",
+            "l2_l3",
+            "l3_l4",
+            "l4_l5",
+            "l5_s1"
+        ]
+    }
+} 

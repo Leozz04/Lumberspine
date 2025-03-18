@@ -1,0 +1,70 @@
+# Dataset files
+dataset/*.zip
+dataset/train_images/
+dataset/test_images/
+dataset/processed_data/
+
+# Training files
+train/processed_data/
+train/checkpoints/
+train/logs/
+
+# Model checkpoints and logs
+*.pth
+*.pt
+*.bin
+*.ckpt
+events.out.tfevents.*
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+*.log.*
+tensorboard/
+wandb/
+
+# Large files
+*.zip
+*.tar
+*.tar.gz
+*.tgz
+*.dcm
+*.png
+*.jpg
+*.jpeg
